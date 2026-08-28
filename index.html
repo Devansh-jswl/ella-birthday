@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07040a">
+<title>For Ella — 29 August ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="boot"><div class="boot-heart">♥</div><p>Preparing something special…</p></div>
+
+<header class="site-header">
+  <a href="#top" class="brand">E<span>♥</span></a>
+  <span class="date-label">29 AUGUST</span>
+  <button id="soundBtn" class="icon-btn" type="button" aria-label="Toggle sound">♪</button>
+</header>
+
+<!-- Decorative animated flowers. They are CSS/SVG-style DOM objects, not WebGL. -->
+<div id="garden" aria-label="Interactive flowers"></div>
+
+<main id="top">
+<section class="section hero">
+  <div class="hero-content reveal">
+    <small>A LITTLE UNIVERSE MADE FOR ONE PERSON</small>
+    <h1>Happy Birthday,<br><em>Ella.</em></h1>
+    <p>Today isn't just another date on the calendar.<br>It's the day someone very special came into this world.</p>
+    <button class="pill" data-scroll="#story">Begin our story ↓</button>
+  </div>
+</section>
+
+<section id="story" class="section story">
+  <div class="story-copy reveal">
+    <small>01 — BEFORE THE MEMORIES</small>
+    <h2>Some people enter your life<br><em>and quietly change it.</em></h2>
+    <p class="muted">I don't know exactly how many little moments brought us here. I only know that I'm grateful for every one of them.</p>
+  </div>
+  <article class="quote-card reveal"><span>“</span><p id="storyQuote"></p><i>— for Ella</i></article>
+</section>
+
+<section id="memories" class="section memories-section">
+  <div class="heading reveal"><small>02 — OUR LITTLE ARCHIVE</small><h2>Twenty-nine memories.<br><em>One beautiful story.</em></h2><p>Twenty-nine little moments, each holding a piece of our story. Tap a photograph and let it take you back for a moment.</p></div>
+  <div id="memoryGrid" class="memory-grid"></div>
+</section>
+
+<section id="videos" class="section video-section">
+  <div class="heading reveal">
+    <small>03 — MOMENTS THAT MOVE</small>
+    <h2>Some memories<br><em>should move.</em></h2>
+    <p class="muted">Short videos can live here alongside the photographs — little pieces of us that a still image cannot capture.</p>
+  </div>
+  <div id="videoGrid" class="video-grid"></div>
+</section>
+
+<section id="timeline" class="section timeline-section">
+  <div class="heading reveal"><small>04 — THEN, NOW & EVERYTHING BETWEEN</small><h2>A story that keeps<br><em>becoming.</em></h2></div>
+  <div id="timelineList" class="timeline"></div>
+</section>
+
+<section id="flowers" class="section garden-section">
+  <div class="garden-card reveal">
+    <div class="garden-copy">
+      <small>05 — A GARDEN FOR YOU</small>
+      <h2>Touch a flower.<br><em>Keep a little love.</em></h2>
+      <p class="muted">Every bloom here is a gladiolus — different colours, different forms, one little garden made for you.</p>
+    </div>
+    <div id="flowerQuote" class="flower-quote"><small>CHOOSE A BLOOM</small><p>There is a little message waiting inside.</p></div>
+  </div>
+</section>
+
+<section id="birthday" class="section birthday">
+  <article class="birthday-card reveal">
+    <small>06 — YOUR DAY</small>
+    <div class="date"><strong>29</strong><span>AUGUST<br><b id="year"></b></span></div>
+    <p class="muted">One date. One extraordinary girl. And one very lucky person who gets to celebrate you.</p>
+    <div class="count"><div><b id="d">00</b><small>days</small></div><div><b id="h">00</b><small>hours</small></div><div><b id="m">00</b><small>minutes</small></div><div><b id="s">00</b><small>seconds</small></div></div>
+  </article>
+</section>
+
+<section id="letter" class="section letter">
+  <article class="paper reveal">
+    <small>07 — A LETTER I WANTED YOU TO READ SLOWLY</small>
+    <h2>Dear Ella,</h2><div id="letterText"></div><p class="sign">Always,<br><em>me.</em></p>
+  </article>
+</section>
+
+<footer>Made especially for Ella <span>29 • 08 • 2026</span></footer>
+</main>
+
+<div id="videoModal" class="modal video-modal" aria-hidden="true">
+  <div class="backdrop" data-video-close></div>
+  <article class="video-modal-card">
+    <button class="close" data-video-close type="button">×</button>
+    <video id="modalVideo" controls playsinline preload="metadata"></video>
+    <div class="video-modal-copy"><small id="modalVideoLabel"></small><h3 id="modalVideoTitle"></h3><p id="modalVideoQuote"></p></div>
+  </article>
+</div>
+
+<div id="modal" class="modal" aria-hidden="true">
+  <div class="backdrop" data-close></div>
+  <article class="modal-card"><button class="close" data-close>×</button><img id="modalImg" alt=""><div><small id="modalLabel"></small><h3 id="modalTitle"></h3><p id="modalQuote"></p></div></article>
+</div>
+
+<div id="proposalModal" class="modal proposal-modal" aria-hidden="true">
+  <div class="backdrop" data-proposal-close></div>
+  <article class="proposal-reveal">
+    <button class="close" data-proposal-close aria-label="Close">×</button>
+    <div class="proposal-photo-wrap"><img id="proposalImg" alt="Ella — one last question"></div>
+    <div class="proposal-copy">
+      <small>THE LAST MEMORY</small>
+      <div class="proposal-ring">💍</div>
+      <h3>Ella, I have one last thing to ask you.</h3>
+      <p>I could have ended this website with a birthday wish. But you deserve more than a simple ending.</p>
+      <p class="proposal-question">Will you keep making beautiful memories with me?</p>
+      <div class="proposal-actions"><button id="proposalYes" class="yes">Yes ❤️</button><button id="proposalHug" class="secondary">Come here first 🫶</button></div>
+      <div id="proposalResponse"></div>
+    </div>
+  </article>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+    emailjs.init({
+        publicKey: "N_WBOlxjm6oqzWUgO"
+    });
+</script>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
